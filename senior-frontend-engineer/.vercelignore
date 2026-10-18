@@ -1,0 +1,17 @@
+.ai/
+ai-journey/
+AGENTS.md
+instructions.md
+README.md
+.env*
+.vercel/
+.turbo/
+**/.turbo/
+dist/
+**/dist/
+coverage/
+**/coverage/
+node_modules/
+**/node_modules/
+**/*.test.*
+**/*.spec.*
