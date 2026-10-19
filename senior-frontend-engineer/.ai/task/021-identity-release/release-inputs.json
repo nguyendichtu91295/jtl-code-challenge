@@ -1,0 +1,494 @@
+{
+  "framework": {
+    "name": "Vite",
+    "slug": "vite"
+  },
+  "basePath": "/Users/tunguyen/Desktop/work/jtl-code-challenge/senior-frontend-engineer",
+  "fileCount": 52,
+  "totalSize": 241656,
+  "ignoredCount": 47,
+  "ignored": [
+    ".ai/ai_workflow.md",
+    ".ai/coding_convention.md",
+    ".ai/deployment.md",
+    ".ai/plans",
+    ".ai/task",
+    ".gitignore",
+    ".turbo/cache",
+    ".vercel",
+    "AGENTS.md",
+    "README.md",
+    "ai-journey/README.md",
+    "ai-journey/decisions.md",
+    "ai-journey/prompts.md",
+    "ai-journey/toolchain.md",
+    "apps/web/.turbo/turbo-build.log",
+    "apps/web/.turbo/turbo-lint.log",
+    "apps/web/.turbo/turbo-test.log",
+    "apps/web/.turbo/turbo-typecheck.log",
+    "apps/web/dist/assets",
+    "apps/web/dist/index.html",
+    "apps/web/node_modules",
+    "apps/web/src/App.test.tsx",
+    "instructions.md",
+    "node_modules",
+    "packages/shared/.turbo/turbo-build.log",
+    "packages/shared/.turbo/turbo-lint.log",
+    "packages/shared/.turbo/turbo-test.log",
+    "packages/shared/.turbo/turbo-typecheck.log",
+    "packages/shared/node_modules",
+    "packages/shared/src/fakeApi.test.ts",
+    "packages/todos/.turbo/turbo-build.log",
+    "packages/todos/.turbo/turbo-lint.log",
+    "packages/todos/.turbo/turbo-test.log",
+    "packages/todos/.turbo/turbo-typecheck.log",
+    "packages/todos/node_modules",
+    "packages/todos/src/components/CreateTodoForm.test.tsx",
+    "packages/todos/src/components/TodoList.test.tsx",
+    "packages/todos/src/components/TodoWorkspace.test.tsx",
+    "packages/todos/src/hooks/useTodos.test.tsx",
+    "packages/todos/src/validation.test.ts",
+    "packages/users/.turbo/turbo-build.log",
+    "packages/users/.turbo/turbo-lint.log",
+    "packages/users/.turbo/turbo-test.log",
+    "packages/users/.turbo/turbo-typecheck.log",
+    "packages/users/node_modules",
+    "packages/users/src/components/CreateUserForm.test.tsx",
+    "packages/users/src/validation.test.ts"
+  ],
+  "directories": [
+    {
+      "path": "package-lock.json",
+      "fileCount": 1,
+      "size": 188332
+    },
+    {
+      "path": "packages",
+      "fileCount": 33,
+      "size": 43529
+    },
+    {
+      "path": "apps",
+      "fileCount": 8,
+      "size": 6242
+    },
+    {
+      "path": "eslint.config.js",
+      "fileCount": 1,
+      "size": 1202
+    },
+    {
+      "path": "package.json",
+      "fileCount": 1,
+      "size": 882
+    },
+    {
+      "path": "tsconfig.json",
+      "fileCount": 1,
+      "size": 501
+    },
+    {
+      "path": "turbo.json",
+      "fileCount": 1,
+      "size": 379
+    },
+    {
+      "path": "vercel.json",
+      "fileCount": 1,
+      "size": 260
+    },
+    {
+      "path": ".vercelignore",
+      "fileCount": 1,
+      "size": 180
+    },
+    {
+      "path": "vitest.config.ts",
+      "fileCount": 1,
+      "size": 149
+    },
+    {
+      "path": ".ai",
+      "fileCount": 1,
+      "size": 0
+    },
+    {
+      "path": ".turbo",
+      "fileCount": 1,
+      "size": 0
+    },
+    {
+      "path": "ai-journey",
+      "fileCount": 1,
+      "size": 0
+    }
+  ],
+  "largestFiles": [
+    {
+      "path": "package-lock.json",
+      "size": 188332,
+      "mode": 33188,
+      "sha": "852dce493f423364db9e8d69c23607a7b477ace4"
+    },
+    {
+      "path": "packages/shared/src/fakeApi.ts",
+      "size": 8074,
+      "mode": 33188,
+      "sha": "b94c6726df18b1421c8fd93cb20b7eeed2e245b3"
+    },
+    {
+      "path": "packages/todos/src/components/TodoList.tsx",
+      "size": 7257,
+      "mode": 33188,
+      "sha": "6fc185a52dffb0c77c99d7d18936ecc84fdaf345"
+    },
+    {
+      "path": "packages/todos/src/hooks/useTodos.ts",
+      "size": 4694,
+      "mode": 33188,
+      "sha": "8a144aefbe8f2f8b68534f40be2d811a58adde8f"
+    },
+    {
+      "path": "apps/web/src/App.tsx",
+      "size": 3468,
+      "mode": 33188,
+      "sha": "55d75e64e7890dda7bcb3d959211ef48316076b7"
+    },
+    {
+      "path": "packages/todos/src/components/CreateTodoForm.tsx",
+      "size": 3361,
+      "mode": 33188,
+      "sha": "0d3721d81a57a9efcf3806d4474298765273e0c0"
+    },
+    {
+      "path": "packages/users/src/components/UserPages.tsx",
+      "size": 3170,
+      "mode": 33188,
+      "sha": "dbf47a1e552d2d58e19c2ab182af04b79277a5bc"
+    },
+    {
+      "path": "packages/users/src/components/CreateUserForm.tsx",
+      "size": 2685,
+      "mode": 33188,
+      "sha": "74595b530ee117ceea584771bfeaa72827d178db"
+    },
+    {
+      "path": "packages/todos/src/components/TodoWorkspace.tsx",
+      "size": 1462,
+      "mode": 33188,
+      "sha": "702ba35e16ed884f6355299022dbdb565f14abb1"
+    },
+    {
+      "path": "packages/users/src/components/UserList.tsx",
+      "size": 1355,
+      "mode": 33188,
+      "sha": "3b325186b9bea58c70dae87adfd614583c9b7dc7"
+    }
+  ],
+  "files": [
+    {
+      "path": ".ai",
+      "size": 0,
+      "mode": 16877
+    },
+    {
+      "path": ".turbo",
+      "size": 0,
+      "mode": 16877
+    },
+    {
+      "path": ".vercelignore",
+      "size": 180,
+      "mode": 33188,
+      "sha": "3991367836d62887bf6205004e8231fef4403ec0"
+    },
+    {
+      "path": "ai-journey",
+      "size": 0,
+      "mode": 16877
+    },
+    {
+      "path": "apps/web/.turbo",
+      "size": 0,
+      "mode": 16877
+    },
+    {
+      "path": "apps/web/dist",
+      "size": 0,
+      "mode": 16877
+    },
+    {
+      "path": "apps/web/index.html",
+      "size": 351,
+      "mode": 33188,
+      "sha": "985ff08beaa62136fe875b5949e7b7493536c1e0"
+    },
+    {
+      "path": "apps/web/package.json",
+      "size": 901,
+      "mode": 33188,
+      "sha": "e7f5db8fc7d507f04693c72785346e1aff879487"
+    },
+    {
+      "path": "apps/web/src/App.tsx",
+      "size": 3468,
+      "mode": 33188,
+      "sha": "55d75e64e7890dda7bcb3d959211ef48316076b7"
+    },
+    {
+      "path": "apps/web/src/index.css",
+      "size": 523,
+      "mode": 33188,
+      "sha": "9e8055290917ea7086cb46081373cee7f4bb98e7"
+    },
+    {
+      "path": "apps/web/src/main.tsx",
+      "size": 692,
+      "mode": 33188,
+      "sha": "69258aff164d636c1eca696c877c9ecaa04949b7"
+    },
+    {
+      "path": "apps/web/vite.config.ts",
+      "size": 307,
+      "mode": 33188,
+      "sha": "49e05bb8910811d4ccea3716ae8c5ebf3fc589f4"
+    },
+    {
+      "path": "eslint.config.js",
+      "size": 1202,
+      "mode": 33188,
+      "sha": "3b4a58e9bddd3bf39ce511dff1c46ba68a5c3bab"
+    },
+    {
+      "path": "package-lock.json",
+      "size": 188332,
+      "mode": 33188,
+      "sha": "852dce493f423364db9e8d69c23607a7b477ace4"
+    },
+    {
+      "path": "package.json",
+      "size": 882,
+      "mode": 33188,
+      "sha": "8df37476f83a8d93edceecafcc954c375a87444d"
+    },
+    {
+      "path": "packages/shared/.turbo",
+      "size": 0,
+      "mode": 16877
+    },
+    {
+      "path": "packages/shared/package.json",
+      "size": 677,
+      "mode": 33188,
+      "sha": "00ea4ef16ed6225caa5b69f0cb02c79d6c550657"
+    },
+    {
+      "path": "packages/shared/src/apiError.ts",
+      "size": 360,
+      "mode": 33188,
+      "sha": "47fab8141e0247f300bc4b3741d0d4d831da9cb5"
+    },
+    {
+      "path": "packages/shared/src/fakeApi.ts",
+      "size": 8074,
+      "mode": 33188,
+      "sha": "b94c6726df18b1421c8fd93cb20b7eeed2e245b3"
+    },
+    {
+      "path": "packages/shared/src/index.ts",
+      "size": 425,
+      "mode": 33188,
+      "sha": "5483e18f124397003ce8c6e485a666dd26508af8"
+    },
+    {
+      "path": "packages/shared/src/seed.ts",
+      "size": 510,
+      "mode": 33188,
+      "sha": "fca2fcf08cdeff6f5e97db706af3de911b29b669"
+    },
+    {
+      "path": "packages/shared/src/selectedUserIdAtom.ts",
+      "size": 247,
+      "mode": 33188,
+      "sha": "901c6dbcd67564d300aff6c7bba42de3eeec8c9a"
+    },
+    {
+      "path": "packages/shared/src/types.ts",
+      "size": 512,
+      "mode": 33188,
+      "sha": "ab4e87501af33f0f2c259240062ddd1d84933319"
+    },
+    {
+      "path": "packages/shared/src/ui/Button.tsx",
+      "size": 1063,
+      "mode": 33188,
+      "sha": "8e86cc5bf63b9e6877dbd316ff48287b5420337b"
+    },
+    {
+      "path": "packages/shared/src/ui/Card.tsx",
+      "size": 268,
+      "mode": 33188,
+      "sha": "4d903ae4e05954bb23e1c86f975d4a7d8ff588b3"
+    },
+    {
+      "path": "packages/shared/src/ui/cn.ts",
+      "size": 169,
+      "mode": 33188,
+      "sha": "f095b349a6d6cbcbf7bcabdb2f51b3095e7403f0"
+    },
+    {
+      "path": "packages/shared/src/ui/Dialog.tsx",
+      "size": 1209,
+      "mode": 33188,
+      "sha": "f393123c1c0b695b4fe46f4efb71623d53e1b638"
+    },
+    {
+      "path": "packages/shared/src/ui/Input.tsx",
+      "size": 549,
+      "mode": 33188,
+      "sha": "c285709dc449a3bd1a97eb636f6ce75cf4900c7b"
+    },
+    {
+      "path": "packages/shared/src/ui/Label.tsx",
+      "size": 261,
+      "mode": 33188,
+      "sha": "31ac6d3f7d8f00b96cbb2ee7ddf82145ecb76a4c"
+    },
+    {
+      "path": "packages/shared/src/ui/UserIdentity.tsx",
+      "size": 956,
+      "mode": 33188,
+      "sha": "30fcb5995eefc99302e5ff491181b6b09bbd2f4e"
+    },
+    {
+      "path": "packages/todos/.turbo",
+      "size": 0,
+      "mode": 16877
+    },
+    {
+      "path": "packages/todos/package.json",
+      "size": 474,
+      "mode": 33188,
+      "sha": "873ce8badee7a2a621ed53650ed01d26d075fc01"
+    },
+    {
+      "path": "packages/todos/src/api/todosApi.ts",
+      "size": 218,
+      "mode": 33188,
+      "sha": "4bc00cb0a0fbfcbe0443186d7a6aac0641485062"
+    },
+    {
+      "path": "packages/todos/src/components/CreateTodoForm.tsx",
+      "size": 3361,
+      "mode": 33188,
+      "sha": "0d3721d81a57a9efcf3806d4474298765273e0c0"
+    },
+    {
+      "path": "packages/todos/src/components/TodoList.tsx",
+      "size": 7257,
+      "mode": 33188,
+      "sha": "6fc185a52dffb0c77c99d7d18936ecc84fdaf345"
+    },
+    {
+      "path": "packages/todos/src/components/TodoWorkspace.tsx",
+      "size": 1462,
+      "mode": 33188,
+      "sha": "702ba35e16ed884f6355299022dbdb565f14abb1"
+    },
+    {
+      "path": "packages/todos/src/hooks/useTodos.ts",
+      "size": 4694,
+      "mode": 33188,
+      "sha": "8a144aefbe8f2f8b68534f40be2d811a58adde8f"
+    },
+    {
+      "path": "packages/todos/src/index.ts",
+      "size": 481,
+      "mode": 33188,
+      "sha": "5d31628f97c90d0733aab6724e2f8b49d4665683"
+    },
+    {
+      "path": "packages/todos/src/validation.ts",
+      "size": 539,
+      "mode": 33188,
+      "sha": "4f78b9f0e5db5c5e2454888185e0c950fc181495"
+    },
+    {
+      "path": "packages/users/.turbo",
+      "size": 0,
+      "mode": 16877
+    },
+    {
+      "path": "packages/users/package.json",
+      "size": 408,
+      "mode": 33188,
+      "sha": "9d61adb0bb26de7c884574a96ad1020560df8d0b"
+    },
+    {
+      "path": "packages/users/src/api/usersApi.ts",
+      "size": 158,
+      "mode": 33188,
+      "sha": "73563f45a1d349f19cfa6d78198184424355b936"
+    },
+    {
+      "path": "packages/users/src/components/CreateUserForm.tsx",
+      "size": 2685,
+      "mode": 33188,
+      "sha": "74595b530ee117ceea584771bfeaa72827d178db"
+    },
+    {
+      "path": "packages/users/src/components/UserList.tsx",
+      "size": 1355,
+      "mode": 33188,
+      "sha": "3b325186b9bea58c70dae87adfd614583c9b7dc7"
+    },
+    {
+      "path": "packages/users/src/components/UserPages.tsx",
+      "size": 3170,
+      "mode": 33188,
+      "sha": "dbf47a1e552d2d58e19c2ab182af04b79277a5bc"
+    },
+    {
+      "path": "packages/users/src/hooks/useUsers.ts",
+      "size": 1123,
+      "mode": 33188,
+      "sha": "edae8d241ef828e09d6bf00aa0df765b564301dc"
+    },
+    {
+      "path": "packages/users/src/index.ts",
+      "size": 413,
+      "mode": 33188,
+      "sha": "3139b2ac0a6fffa16eafe57b406a2f2adcd4423a"
+    },
+    {
+      "path": "packages/users/src/validation.ts",
+      "size": 451,
+      "mode": 33188,
+      "sha": "ca92d14838d765b646b6db95ce9395c5c770f4b5"
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 501,
+      "mode": 33188,
+      "sha": "2f8f292bda46fcac7c2e729fa6dee8edc250de91"
+    },
+    {
+      "path": "turbo.json",
+      "size": 379,
+      "mode": 33188,
+      "sha": "dbd68b3d77876580eaaece7afbc5230badeb0898"
+    },
+    {
+      "path": "vercel.json",
+      "size": 260,
+      "mode": 33188,
+      "sha": "864477d2ea11019ccff310b4300be1323c07fa06"
+    },
+    {
+      "path": "vitest.config.ts",
+      "size": 149,
+      "mode": 33188,
+      "sha": "86a3b058a25ede51dfdf6cd6a844bb3e2cf113ea"
+    }
+  ]
+}
