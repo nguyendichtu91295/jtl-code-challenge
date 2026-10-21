@@ -2,7 +2,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { usersApi } from "../api/usersApi";
 import type { CreateUserInput, User } from "@jtl/shared";
 
-export const userQueryKeys = {
+const userQueryKeys = {
   all: ["users"] as const,
   detail: (userId: string) => ["users", userId] as const,
 };

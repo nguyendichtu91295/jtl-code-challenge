@@ -10,6 +10,13 @@
 
 Add tools only when actually used in subsequent work.
 
+## Unused code analysis — 2026-10-21
+
+- Installed Knip 6.42.1 as a root development dependency with npm 11.19.0; added `npm run knip` to analyze npm workspaces and include entry-point exports.
+- Used `functions.exec` / `exec_command` for repository inspection and execution, and `apply_patch` to update package metadata and workflow records.
+- Read Knip's official [configuration](https://knip.dev/reference/configuration) and [project file guidance](https://knip.dev/guides/configuring-project-files). Knip discovered the workspaces from the root npm configuration, so no separate `knip.json` was needed.
+- `npm run knip` reported the known unused `getPendingTodoIds` helper plus additional exports and dependency findings. No automatic fixes were applied; package API findings need human review.
+
 ## Follow-up decision research — 2026-10-17
 
 - `web.run` through `functions.exec`: checked official shadcn/ui, npm, pnpm, and MDN documentation for the decision discussion. Package-manager findings did not establish a selection.

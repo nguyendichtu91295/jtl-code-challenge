@@ -1,5 +1,4 @@
-export const TODO_TITLE_MIN_LENGTH = 1;
-export const TODO_TITLE_MAX_LENGTH = 200;
+const TODO_TITLE_MAX_LENGTH = 200;
 
 export interface CreateTodoErrors {
   title?: string;

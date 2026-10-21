@@ -14,10 +14,6 @@ export interface OptimisticTodo extends TodoItem { isPending: true }
 type CachedTodo = TodoItem | OptimisticTodo;
 interface OptimisticContext { assigneeId: string; optimisticId: string }
 
-export function getPendingTodoIds(items: CachedTodo[] | undefined): Set<string> {
-  return new Set(items?.filter((item): item is OptimisticTodo => "isPending" in item && item.isPending).map((item) => item.id));
-}
-
 async function refreshWhenSettled(client: QueryClient) {
   // The current mutation is still pending inside onSettled. Never refetch over another write.
   if (client.isMutating({ mutationKey: todoQueryKeys.all }) <= 1) {

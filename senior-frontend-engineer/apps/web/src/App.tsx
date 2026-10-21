@@ -50,7 +50,7 @@ export function createAppRouter(history = createBrowserHistory()) {
   return createRouter({ routeTree, history });
 }
 
-export const router = createAppRouter();
+const router = createAppRouter();
 
 declare module "@tanstack/react-router" { interface Register { router: typeof router } }
 export function App({ appRouter = router }: { appRouter?: AnyRouter }) { return <RouterProvider router={appRouter} />; }

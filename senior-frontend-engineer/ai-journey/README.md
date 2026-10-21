@@ -12,6 +12,12 @@
 
 This evidence is maintained during the work. Proposed choices are not recorded as approved decisions, and planned checks are not recorded as passing results.
 
+## Unused code analysis
+
+[Plan 005](../.ai/plans/005-unused-code-analysis.md) records the Knip trial. Task 022 installed Knip at the workspace root and ran the report; see its [task](../.ai/task/022-knip-analysis/task.md) and [execution result](../.ai/task/022-knip-analysis/execution.md). The report found `getPendingTodoIds` unused, along with other exports and dependency findings that need review before cleanup.
+
+[Plan 006](../.ai/plans/006-unused-export-cleanup.md) records the unused-export cleanup. Tasks 023–024 are DONE; Knip export/type analysis and the standard workspace checks passed. See the [implementation result](../.ai/task/023-prune-unused-exports/execution.md) and [verification result](../.ai/task/024-verify-export-cleanup/execution.md).
+
 ## Task records
 
 - [001-workspace-setup](../.ai/task/001-workspace-setup/task.md) — [status](../.ai/task/001-workspace-setup/basic_info.md), [execution](../.ai/task/001-workspace-setup/execution.md)

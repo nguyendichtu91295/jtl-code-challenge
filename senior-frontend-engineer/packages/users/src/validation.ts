@@ -1,5 +1,5 @@
-export const USERNAME_MIN_LENGTH = 1;
-export const USERNAME_MAX_LENGTH = 40;
+const USERNAME_MIN_LENGTH = 1;
+const USERNAME_MAX_LENGTH = 40;
 
 export interface CreateUserErrors {
   username?: string;

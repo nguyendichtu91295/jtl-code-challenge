@@ -1,5 +1,9 @@
 # Key prompts
 
+- “would installing codegraph help identify unused function like this? i was thinking of cleaning up” followed by “lets try it”: added Knip at the npm workspace root, ran a report, and inspected candidates without auto-removing code.
+- “lets try to come up with plan to remove the unused export + verify if everything is good; start with planning + publish task; wait for my confirmation to run”: created plan 006 and pending tasks 023–024. No cleanup code has run.
+- “ok run it, pause after 3 retry for any issue”: executed tasks 023–024. Knip exposed five additional module exports and lint caught one redundant constant; corrected both, then the final export report and all workspace checks passed.
+
 ## 2026-10-17 — inspect the challenge
 
 > checkout the current repo, it has a instruction file
