@@ -16,6 +16,7 @@ Add tools only when actually used in subsequent work.
 - Used `functions.exec` / `exec_command` for repository inspection and execution, and `apply_patch` to update package metadata and workflow records.
 - Read Knip's official [configuration](https://knip.dev/reference/configuration) and [project file guidance](https://knip.dev/guides/configuring-project-files). Knip discovered the workspaces from the root npm configuration, so no separate `knip.json` was needed.
 - `npm run knip` reported the known unused `getPendingTodoIds` helper plus additional exports and dependency findings. No automatic fixes were applied; package API findings need human review.
+- After the user approved cleanup, focused Knip export/type analysis, Turbo typecheck/lint/test/build, and Vercel production publishing used the cached Vercel CLI 64.5.0. Vercel identity/project configuration and the public routes/assets were checked; release evidence is in task 024.
 
 ## Follow-up decision research — 2026-10-17
 
