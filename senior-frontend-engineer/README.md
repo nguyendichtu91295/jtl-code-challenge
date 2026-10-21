@@ -1,28 +1,63 @@
-# People & Tasks
+# Frontend Take-Home
 
-A small React and TypeScript app for creating users and tracking their assigned tasks. The web app owns routes and composes independent user and todo feature packages; shared domain types, fake API, persistence, query setup and UI primitives live in `packages/shared`.
+## Live app
 
-The `/users` overview shows each person's Doing and Done counts. Add user opens a Dialog; a successful create closes it and stays on the overview. A user's detail route (`/users/:userId`) contains fixed-assignee task creation and one task list with All, Doing and Done filters. Each task begins in Doing and its leading status icon toggles it to Done or back; the title wraps in full on narrow screens. Todo creation remains optimistic: a pending task appears immediately and only its own row is removed if creation fails.
-
-TanStack Query owns server-shaped records and per-user task caches. Jotai holds the cross-cutting storage availability status shown when browser storage is unavailable. The fake API best-effort persists confirmed records to a versioned localStorage snapshot; old snapshots migrate missing task status to Doing without losing saved users or tasks. Invalid/unavailable storage falls back to seed/in-memory data. Private browsing may clear saved data when the session ends. Storage is origin-specific, with no cross-tab synchronization.
-
-Username validation trims surrounding spaces, is case-sensitive, checks uniqueness against the current dataset, and accepts 1–40 characters. Task titles accept 1–200 characters. Both forms show limits and retain drafts after request failures.
+Production URL: [jtl-frontend-challenge.vercel.app](https://jtl-frontend-challenge.vercel.app)
 
 ## Run locally
 
-Use Node.js 20.19+ and npm 11 from this directory:
+From this directory, install dependencies and start the app:
 
 ```sh
 npm ci
 npm run dev
 ```
 
-The app opens at the Vite URL printed in the terminal. Check the workspace with `npm run lint`, `npm run typecheck`, `npm run test`, and `npm run build`. npm workspaces links local packages; Turborepo runs package scripts and dependency order; Vite serves and bundles the SPA.
+Open the Vite URL printed in the terminal.
 
-## Performance and production testing
+## Main features
 
-Task queries are scoped by user. The overview fetches one batched task-count summary and reuses any already loaded detail cache for immediate updates. The app is small enough that route-level code splitting would add little value; lazy routes can be introduced if it grows. Tests cover validation, storage migration/fallback, status persistence, optimistic create/rollback and overlap, user isolation, dialog behavior, direct routes and task status transitions. Browser checks cover the responsive user-to-task flow and keyboard use.
+This app manages users and their assigned tasks. The user list shows each user's Doing and Done counts. From a user's detail page, you can view their tasks, filter by status, and create another task for them.
 
-## Deployment
+There is no standalone task-creation page. Tasks must have an assignee, so creation starts from that user's detail page.
 
-Production: [jtl-frontend-challenge.vercel.app](https://jtl-frontend-challenge.vercel.app). Vercel uses Node 22, `npm ci`, `npm run build`, `apps/web/dist`, and SPA fallback rewrites. Latest user-first release is READY at https://jtl-frontend-challenge-5lduuyrd2-coding-challenge.vercel.app (deployment `dpl_HTyn3aHCRytStxp1gK8FbggRLTuj`). Releases use the Vercel CLI under the `coding-challenge` team; Git is not connected to the project.
+The interface is mobile-first and adapts to larger screens.
+
+## Monorepo structure
+
+- `apps/web` — the SPA, routing, providers, and feature composition.
+- `packages/users` — user pages, forms, query hooks, and API access.
+- `packages/todos` — task UI, query hooks, and API access.
+- `packages/shared` — shared domain types, fake API and persistence, Jotai state, and UI components.
+
+The feature packages export TypeScript source and do not have their own Vite configs or build commands. The web app's Vite build bundles the features it imports. Root Turbo commands run the workspace build, lint, typecheck, and test scripts.
+
+## Technical choices
+
+- **React, TypeScript, and Vite** provide the single-page app and its build.
+- **TanStack Router** handles the user list and user detail routes.
+- **TanStack Query** manages API-shaped data, caching, and mutations.
+- **Optimistic updates** are used for task creation: a pending task appears immediately and is removed if creation fails. User creation and task status changes update the cache after the fake API succeeds.
+- **Jotai** stores only whether persistence is `available` or `memory-only`. The fake API keeps records in memory and best-effort saves them to localStorage so they can survive a refresh when storage is available.
+- **Tailwind CSS** styles the app, and **lucide-react** provides icons. Shared shadcn-style UI components are built with Tailwind and Radix primitives.
+
+## Separation and accessibility
+
+Components handle presentation and local interaction. Hooks manage query and mutation behavior, while API modules own data access.
+
+Forms use semantic labels connected to their inputs. Task status controls are buttons that can be reached with Tab and activated with Space or Enter.
+
+## Form validation
+
+Validation is library-free because the rules are small:
+
+- **Username:** trim surrounding spaces, require 1–40 characters, and check uniqueness against the current data set. Comparison is case-sensitive.
+- **Task title:** trim surrounding spaces and require 1–200 characters. A 200-character title is valid.
+
+## AI workflow
+
+- [`.ai/ai_workflow.md`](.ai/ai_workflow.md) describes the planning, task breakdown, execution, and validation workflow.
+- [`.ai/coding_convention.md`](.ai/coding_convention.md) records the coding conventions used for the project.
+- [`.ai/deployment.md`](.ai/deployment.md) records deployment and release checks.
+- [`.ai/plans/`](.ai/plans/) contains the project plans; [`.ai/task/`](.ai/task/) contains their task breakdowns and execution records.
+- [`ai-journey/`](ai-journey/README.md) contains key prompts, decisions, tools, and reflections on the AI-assisted work.
